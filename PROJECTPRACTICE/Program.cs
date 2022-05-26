@@ -16,7 +16,7 @@ namespace PROJECTPRACTICE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartUp());
+            Application.Run(new Login());
         }
     }
 }
