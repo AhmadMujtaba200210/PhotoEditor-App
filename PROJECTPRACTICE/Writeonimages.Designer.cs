@@ -37,6 +37,7 @@ namespace PROJECTPRACTICE
             this.btnsaveimg = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddwatermark = new Guna.UI2.WinForms.Guna2Button();
             this.btnclose = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,6 @@ namespace PROJECTPRACTICE
             this.TextBox1.TabIndex = 3;
             this.TextBox1.Visible = false;
             this.TextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyDown);
-            this.TextBox1.Leave += new System.EventHandler(this.TextBox1_Leave);
             // 
             // imageBox2
             // 
@@ -141,13 +141,36 @@ namespace PROJECTPRACTICE
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Maroon;
-            this.btnclose.Location = new System.Drawing.Point(2, 0);
+            this.btnclose.Location = new System.Drawing.Point(2, 2);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(26, 27);
+            this.btnclose.Size = new System.Drawing.Size(22, 25);
             this.btnclose.TabIndex = 9;
             this.btnclose.Text = "X";
             this.btnclose.UseVisualStyleBackColor = true;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Red",
+            "Dodger Blue",
+            "Cyan",
+            "Corn flower blue",
+            "Orange",
+            "Firebrick",
+            "Maroon",
+            "Teal",
+            "Black",
+            "Crimson"});
+            this.comboBox1.Location = new System.Drawing.Point(359, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 28);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.Text = "....Choose Colour....";
+            this.comboBox1.Visible = false;
             // 
             // Writeonimages
             // 
@@ -155,6 +178,7 @@ namespace PROJECTPRACTICE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(856, 474);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btnaddwatermark);
             this.Controls.Add(this.btnsaveimg);
@@ -180,5 +204,6 @@ namespace PROJECTPRACTICE
         private Guna.UI2.WinForms.Guna2Button btnsaveimg;
         private Guna.UI2.WinForms.Guna2Button btnaddwatermark;
         private System.Windows.Forms.Button btnclose;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

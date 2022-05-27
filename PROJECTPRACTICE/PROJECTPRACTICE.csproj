@@ -117,6 +117,7 @@
     <Compile Include="Splashscreen.Designer.cs">
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="textcolour.cs" />
     <Compile Include="Writeonimages.cs">
       <SubType>Form</SubType>
     </Compile>

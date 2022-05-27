@@ -35,7 +35,7 @@ namespace PROJECTPRACTICE
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.ProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,7 +48,7 @@ namespace PROJECTPRACTICE
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.ProgressBar1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,7 +60,7 @@ namespace PROJECTPRACTICE
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(233, 136);
+            this.pictureBox2.Location = new System.Drawing.Point(216, 151);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(201, 50);
             this.pictureBox2.TabIndex = 1;
@@ -76,13 +76,17 @@ namespace PROJECTPRACTICE
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // progressBar1
+            // ProgressBar1
             // 
-            this.progressBar1.ForeColor = System.Drawing.Color.Teal;
-            this.progressBar1.Location = new System.Drawing.Point(107, 251);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(471, 16);
-            this.progressBar1.TabIndex = 2;
+            this.ProgressBar1.BackColor = System.Drawing.Color.White;
+            this.ProgressBar1.BorderRadius = 5;
+            this.ProgressBar1.Location = new System.Drawing.Point(117, 254);
+            this.ProgressBar1.MaximumValue = 100;
+            this.ProgressBar1.Name = "ProgressBar1";
+            this.ProgressBar1.ProgressColor = System.Drawing.Color.Teal;
+            this.ProgressBar1.Size = new System.Drawing.Size(410, 10);
+            this.ProgressBar1.TabIndex = 2;
+            this.ProgressBar1.Value = 0;
             // 
             // Splashscreen
             // 
@@ -106,6 +110,6 @@ namespace PROJECTPRACTICE
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private Bunifu.Framework.UI.BunifuProgressBar ProgressBar1;
     }
 }
