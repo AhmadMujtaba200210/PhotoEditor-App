@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu;
 using Emgu.CV;
+using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 using Emgu.CV.Util;
 
@@ -117,7 +118,8 @@ namespace PROJECTPRACTICE
                     mask.DrawPolyline(polys.ToArray(), false, new Gray(255), 5);
                 }
                 var output = img.CopyBlank();
-
+                CvInvoke.Inpaint(img, mask, output, 3, InpaintType.Telea);
+                pictureBox2.Image = output.ToBitmap();
             }
             catch(Exception ex)
             {
