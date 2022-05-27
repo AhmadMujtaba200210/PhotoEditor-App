@@ -21,7 +21,7 @@ namespace PROJECTPRACTICE
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            ProgressBar1.Value += 6;
+            ProgressBar1.Value += 5;
             if (ProgressBar1.Value == 100)
                 timer1.Stop();
         }

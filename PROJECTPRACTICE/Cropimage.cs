@@ -22,7 +22,7 @@ namespace PROJECTPRACTICE
         Rectangle rect;
         Point StartLocation, EndLocation;
         bool IsMouseDown = false;
-
+         
 
         private Dashboard mainform = null;
         public Cropimage(Form callingform)
@@ -37,7 +37,7 @@ namespace PROJECTPRACTICE
             {
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    PictureBox2.Image.Save(saveFileDialog.FileName);                   
+                    PictureBox2.Image.Save(saveFileDialog.FileName);
                 }
             }
         }
@@ -105,6 +105,7 @@ namespace PROJECTPRACTICE
         private void bntloadimg_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+            //ofd.Filter = "Images (*.jpg;*.png;*.bmp)|*.jpg;*.png;*.bmp;";
             try
             {
                 if (ofd.ShowDialog() == DialogResult.OK)

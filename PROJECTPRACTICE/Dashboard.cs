@@ -58,7 +58,7 @@ namespace PROJECTPRACTICE
 
         private void btnremovenoise_Click(object sender, EventArgs e)
         {
-
+            openchildform(new Image_InPainting(this));
         }
 
         private void btnimgoverlay_Click(object sender, EventArgs e)

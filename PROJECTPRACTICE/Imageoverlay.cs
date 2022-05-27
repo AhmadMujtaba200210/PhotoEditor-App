@@ -114,7 +114,7 @@ namespace PROJECTPRACTICE
                     image2.SetValue(new Bgr(0, 0, 0), mask.Not());
                     image1._Or(image2);
                     image1.ROI = Rectangle.Empty;
-
+                    
                     PictureBox1.Image = image1.ToBitmap();
                     bntsaveimg.Enabled = true;
                 }
