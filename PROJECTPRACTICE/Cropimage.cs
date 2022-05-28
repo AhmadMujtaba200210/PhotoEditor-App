@@ -96,7 +96,7 @@ namespace PROJECTPRACTICE
             StartLocation = e.Location;         
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
             this.mainform.show();
@@ -105,7 +105,7 @@ namespace PROJECTPRACTICE
         private void bntloadimg_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.Filter = "Images (*.jpg;*.png;*.bmp)|*.jpg;*.png;*.bmp;";
+            ofd.Filter = "Images (*.jpg;)|*.jpg;";
             try
             {
                 if (ofd.ShowDialog() == DialogResult.OK)

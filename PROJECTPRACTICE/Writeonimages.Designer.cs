@@ -30,22 +30,24 @@ namespace PROJECTPRACTICE
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Writeonimages));
             this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.imageBox2 = new Emgu.CV.UI.ImageBox();
             this.bntloadimg = new Guna.UI2.WinForms.Guna2Button();
             this.btnsaveimg = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddwatermark = new Guna.UI2.WinForms.Guna2Button();
-            this.btnclose = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageBox1
             // 
             this.imageBox1.BackColor = System.Drawing.Color.SandyBrown;
-            this.imageBox1.Location = new System.Drawing.Point(36, 23);
+            this.imageBox1.Location = new System.Drawing.Point(62, 43);
             this.imageBox1.Name = "imageBox1";
             this.imageBox1.Size = new System.Drawing.Size(223, 208);
             this.imageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,7 +67,7 @@ namespace PROJECTPRACTICE
             this.TextBox1.FocusedState.Parent = this.TextBox1;
             this.TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBox1.HoverState.Parent = this.TextBox1;
-            this.TextBox1.Location = new System.Drawing.Point(56, 32);
+            this.TextBox1.Location = new System.Drawing.Point(80, 54);
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.PasswordChar = '\0';
             this.TextBox1.PlaceholderText = "Enter any text";
@@ -79,7 +81,7 @@ namespace PROJECTPRACTICE
             // imageBox2
             // 
             this.imageBox2.BackColor = System.Drawing.Color.SandyBrown;
-            this.imageBox2.Location = new System.Drawing.Point(591, 23);
+            this.imageBox2.Location = new System.Drawing.Point(596, 43);
             this.imageBox2.Name = "imageBox2";
             this.imageBox2.Size = new System.Drawing.Size(223, 208);
             this.imageBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +96,7 @@ namespace PROJECTPRACTICE
             this.bntloadimg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntloadimg.ForeColor = System.Drawing.Color.White;
             this.bntloadimg.HoverState.Parent = this.bntloadimg;
-            this.bntloadimg.Location = new System.Drawing.Point(56, 249);
+            this.bntloadimg.Location = new System.Drawing.Point(80, 277);
             this.bntloadimg.Name = "bntloadimg";
             this.bntloadimg.ShadowDecoration.Parent = this.bntloadimg;
             this.bntloadimg.Size = new System.Drawing.Size(180, 45);
@@ -111,7 +113,7 @@ namespace PROJECTPRACTICE
             this.btnsaveimg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsaveimg.ForeColor = System.Drawing.Color.White;
             this.btnsaveimg.HoverState.Parent = this.btnsaveimg;
-            this.btnsaveimg.Location = new System.Drawing.Point(618, 249);
+            this.btnsaveimg.Location = new System.Drawing.Point(624, 277);
             this.btnsaveimg.Name = "btnsaveimg";
             this.btnsaveimg.ShadowDecoration.Parent = this.btnsaveimg;
             this.btnsaveimg.Size = new System.Drawing.Size(180, 45);
@@ -128,26 +130,13 @@ namespace PROJECTPRACTICE
             this.btnaddwatermark.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddwatermark.ForeColor = System.Drawing.Color.White;
             this.btnaddwatermark.HoverState.Parent = this.btnaddwatermark;
-            this.btnaddwatermark.Location = new System.Drawing.Point(56, 317);
+            this.btnaddwatermark.Location = new System.Drawing.Point(80, 358);
             this.btnaddwatermark.Name = "btnaddwatermark";
             this.btnaddwatermark.ShadowDecoration.Parent = this.btnaddwatermark;
             this.btnaddwatermark.Size = new System.Drawing.Size(180, 45);
             this.btnaddwatermark.TabIndex = 7;
             this.btnaddwatermark.Text = "Add Watermark";
             this.btnaddwatermark.Click += new System.EventHandler(this.btnaddwatermark_Click);
-            // 
-            // btnclose
-            // 
-            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.Maroon;
-            this.btnclose.Location = new System.Drawing.Point(2, 2);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(22, 25);
-            this.btnclose.TabIndex = 9;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = true;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // comboBox1
             // 
@@ -165,12 +154,24 @@ namespace PROJECTPRACTICE
             "Teal",
             "Black",
             "Crimson"});
-            this.comboBox1.Location = new System.Drawing.Point(359, 16);
+            this.comboBox1.Location = new System.Drawing.Point(358, 43);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 28);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "....Choose Colour....";
             this.comboBox1.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, -1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Writeonimages
             // 
@@ -178,8 +179,8 @@ namespace PROJECTPRACTICE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(856, 474);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btnaddwatermark);
             this.Controls.Add(this.btnsaveimg);
             this.Controls.Add(this.bntloadimg);
@@ -191,7 +192,9 @@ namespace PROJECTPRACTICE
             this.Text = "Writeonimages";
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,7 +206,7 @@ namespace PROJECTPRACTICE
         private Guna.UI2.WinForms.Guna2Button bntloadimg;
         private Guna.UI2.WinForms.Guna2Button btnsaveimg;
         private Guna.UI2.WinForms.Guna2Button btnaddwatermark;
-        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -119,3 +119,4 @@ C:\Users\hls\Desktop\PhotoEditor-App\PROJECTPRACTICE\obj\Debug\PROJECTPRACTICE.L
 C:\Users\hls\Desktop\PhotoEditor-App\PROJECTPRACTICE\obj\Debug\PROJECTPRACTICE.Splashscreen.resources
 C:\Users\hls\Desktop\PhotoEditor-App\PROJECTPRACTICE\bin\Debug\Bunifu_UI_v1.52.dll
 C:\Users\hls\Desktop\PhotoEditor-App\PROJECTPRACTICE\obj\Debug\PROJECTPRACTICE.Image_InPainting.resources
+C:\Users\hls\Desktop\PhotoEditor-App\PROJECTPRACTICE\obj\Debug\PROJECTPRACTICE.Collague.resources

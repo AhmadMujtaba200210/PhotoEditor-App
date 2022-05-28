@@ -29,15 +29,17 @@ namespace PROJECTPRACTICE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imageoverlay));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bntloadimg = new Guna.UI2.WinForms.Guna2Button();
             this.btnroi = new Guna.UI2.WinForms.Guna2Button();
             this.btnoverlay = new Guna.UI2.WinForms.Guna2Button();
             this.bntsaveimg = new Guna.UI2.WinForms.Guna2Button();
-            this.btnclose = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -132,18 +134,17 @@ namespace PROJECTPRACTICE
             this.bntsaveimg.Text = "Save image";
             this.bntsaveimg.Click += new System.EventHandler(this.bntsaveimg_Click);
             // 
-            // btnclose
+            // pictureBox2
             // 
-            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.Maroon;
-            this.btnclose.Location = new System.Drawing.Point(3, 2);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(26, 27);
-            this.btnclose.TabIndex = 11;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = true;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(5, -3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Imageoverlay
             // 
@@ -151,7 +152,7 @@ namespace PROJECTPRACTICE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(882, 565);
-            this.Controls.Add(this.btnclose);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.bntsaveimg);
             this.Controls.Add(this.btnoverlay);
             this.Controls.Add(this.btnroi);
@@ -162,7 +163,9 @@ namespace PROJECTPRACTICE
             this.Text = "Imageoverlay";
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,6 +177,6 @@ namespace PROJECTPRACTICE
         private Guna.UI2.WinForms.Guna2Button btnroi;
         private Guna.UI2.WinForms.Guna2Button btnoverlay;
         private Guna.UI2.WinForms.Guna2Button bntsaveimg;
-        private System.Windows.Forms.Button btnclose;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

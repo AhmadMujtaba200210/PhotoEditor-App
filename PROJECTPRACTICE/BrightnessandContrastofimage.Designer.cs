@@ -29,6 +29,7 @@ namespace PROJECTPRACTICE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrightnessandContrastofimage));
             this.lblMinContrast = new System.Windows.Forms.Label();
             this.lblCurrentContrast = new System.Windows.Forms.Label();
             this.lblMaxContrast = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@ namespace PROJECTPRACTICE
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.bntloadimg = new Guna.UI2.WinForms.Guna2Button();
             this.btnsaveimg = new Guna.UI2.WinForms.Guna2Button();
-            this.btnclose = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -52,6 +53,7 @@ namespace PROJECTPRACTICE
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMinContrast
@@ -192,7 +194,7 @@ namespace PROJECTPRACTICE
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.btnclose);
+            this.guna2Panel1.Controls.Add(this.pictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.groupBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -235,18 +237,17 @@ namespace PROJECTPRACTICE
             this.btnsaveimg.Text = "Save image";
             this.btnsaveimg.Click += new System.EventHandler(this.btnsaveimg_Click);
             // 
-            // btnclose
+            // pictureBox2
             // 
-            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.Maroon;
-            this.btnclose.Location = new System.Drawing.Point(8, 4);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(26, 27);
-            this.btnclose.TabIndex = 9;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = true;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(5, 1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // BrightnessandContrastofimage
             // 
@@ -272,6 +273,8 @@ namespace PROJECTPRACTICE
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +296,6 @@ namespace PROJECTPRACTICE
         private Guna.UI2.WinForms.Guna2Button bntloadimg;
         private Guna.UI2.WinForms.Guna2Button btnsaveimg;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnclose;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

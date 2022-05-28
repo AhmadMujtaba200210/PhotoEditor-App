@@ -68,7 +68,7 @@ namespace PROJECTPRACTICE
 
         private void btnmkcolg_Click(object sender, EventArgs e)
         {
-           
+            openchildform(new Collague(this));
         }
 
         private void btnbr_cr_Click(object sender, EventArgs e)

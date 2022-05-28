@@ -85,6 +85,12 @@
     <Compile Include="BrightnessandContrastofimage.Designer.cs">
       <DependentUpon>BrightnessandContrastofimage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Collague.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collague.Designer.cs">
+      <DependentUpon>Collague.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cropimage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,7 @@
     <Compile Include="Dashboard.designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperClass.cs" />
     <Compile Include="Image InPainting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="BrightnessandContrastofimage.resx">
       <DependentUpon>BrightnessandContrastofimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collague.resx">
+      <DependentUpon>Collague.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cropimage.resx">
       <DependentUpon>Cropimage.cs</DependentUpon>
