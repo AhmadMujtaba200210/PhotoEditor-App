@@ -19,7 +19,7 @@ namespace PROJECTPRACTICE
     public partial class Writeonimages : Form
     {
         textcolour []tc = new textcolour[10];
-        int ind = 0;
+        int ind = 0,x=75,y=85;
         string imgname = "";
         Image<Bgr, byte> image1;
         Image<Bgr, byte> image2;
@@ -70,6 +70,7 @@ namespace PROJECTPRACTICE
         private void btnaddwatermark_Click(object sender, EventArgs e)
         {
             comboBox1.Visible = true;
+            comboBox2.Visible = true;
             TextBox1.Visible = true;
             TextBox1.Focus();                     
         }
@@ -87,22 +88,49 @@ namespace PROJECTPRACTICE
             }
         }
 
+        private void settextlocation()
+        {
+            if (comboBox2.SelectedIndex != -1)
+            {
+                if (comboBox2.SelectedItem.ToString() == "Top")
+                {
+                    x = 85;
+                    y = 92;
+                }
+                else if (comboBox2.SelectedItem.ToString() == "Middle")
+                {
+                    x = 85;
+                    y = 250;
+                }
+                else
+                {
+                    x = 85;
+                    y = 475;
+                }
+            }
+
+        }
+
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 if (TextBox1.Text != "")
                 {
+                    settextlocation();
                     if(comboBox1.SelectedIndex!=-1)
                     ind = comboBox1.SelectedIndex;
                     image2 = new Image<Bgr, byte>(imgname);
-                    CvInvoke.PutText(image2, TextBox1.Text, new Point(50, 170), FontFace.HersheySimplex, 7.0, new MCvScalar(tc[ind].b,tc[ind].g,tc[ind].r), 8);
+                    CvInvoke.PutText(image2, TextBox1.Text, new Point(x,y), FontFace.HersheySimplex, 4.0, new MCvScalar(tc[ind].b,tc[ind].g,tc[ind].r), 8);
                     imageBox2.Image = image2;
                     CvInvoke.WaitKey();                  
                     btnsaveimg.Enabled = true;
                     TextBox1.Clear();
                     TextBox1.Visible = false;
+                    comboBox1.Visible = false;
+                    comboBox2.Visible = false;
                     comboBox1.Text = "....Choose Colour....";
+                    comboBox2.Text = "....Select text location....";
                 }
                 else
                 {

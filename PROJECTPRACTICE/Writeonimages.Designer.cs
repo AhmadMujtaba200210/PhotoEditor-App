@@ -39,6 +39,7 @@ namespace PROJECTPRACTICE
             this.btnaddwatermark = new Guna.UI2.WinForms.Guna2Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,6 +69,7 @@ namespace PROJECTPRACTICE
             this.TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBox1.HoverState.Parent = this.TextBox1;
             this.TextBox1.Location = new System.Drawing.Point(80, 54);
+            this.TextBox1.MaxLength = 10;
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.PasswordChar = '\0';
             this.TextBox1.PlaceholderText = "Enter any text";
@@ -154,9 +156,9 @@ namespace PROJECTPRACTICE
             "Teal",
             "Black",
             "Crimson"});
-            this.comboBox1.Location = new System.Drawing.Point(358, 43);
+            this.comboBox1.Location = new System.Drawing.Point(351, 43);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 28);
+            this.comboBox1.Size = new System.Drawing.Size(178, 28);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "....Choose Colour....";
             this.comboBox1.Visible = false;
@@ -173,12 +175,33 @@ namespace PROJECTPRACTICE
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            "Top",
+            "Middle",
+            "Bottom"});
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Top",
+            "Middle",
+            "Bottom"});
+            this.comboBox2.Location = new System.Drawing.Point(351, 130);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(178, 28);
+            this.comboBox2.TabIndex = 14;
+            this.comboBox2.Text = "....Select text location....";
+            this.comboBox2.Visible = false;
+            // 
             // Writeonimages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(856, 474);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnaddwatermark);
@@ -208,5 +231,6 @@ namespace PROJECTPRACTICE
         private Guna.UI2.WinForms.Guna2Button btnaddwatermark;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
