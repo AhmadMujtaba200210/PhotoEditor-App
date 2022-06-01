@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu;
 using Emgu.CV;
@@ -18,6 +14,7 @@ namespace PROJECTPRACTICE
 {
     public partial class Image_InPainting : Form
     {
+        string imgname;
         Image<Bgr, byte> imageInput;
         List<List<Point>> InpaintPoints = null;
         List<Point> InpaintCurrentPoints=null;
@@ -40,7 +37,7 @@ namespace PROJECTPRACTICE
         {
             InpaintSelection = true;
             InpaintCurrentPoints = new List<Point>();
-            InpaintPoints=new List<List<Point>>();
+            InpaintPoints=new List<List<Point>>();           
         }
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
@@ -59,6 +56,7 @@ namespace PROJECTPRACTICE
                 InpaintMouseDown = false;
                 InpaintPoints.Add(InpaintCurrentPoints.ToList());
                 InpaintCurrentPoints.Clear();
+                button2.Enabled = true;
             }
         }
 
@@ -83,28 +81,7 @@ namespace PROJECTPRACTICE
                 pictureBox2.Invalidate();
             }
         }
-        string imgname;
-        private void button4_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog emf = new OpenFileDialog();
-            try
-            {
-                if (emf.ShowDialog() == DialogResult.OK)
-                {
-                    imgname = emf.FileName;
-                    Image<Bgr, byte> img = new Image<Bgr, byte>(emf.FileName);
-                    pictureBox2.Image = img.ToBitmap();
-                    imageInput = img;
-                  //  textimage.Visible = true;
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+               
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -124,6 +101,39 @@ namespace PROJECTPRACTICE
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void openimg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog emf = new OpenFileDialog();
+            try
+            {
+                if (emf.ShowDialog() == DialogResult.OK)
+                {
+                    imgname = emf.FileName;
+                    Image<Bgr, byte> img = new Image<Bgr, byte>(emf.FileName);
+                    pictureBox2.Image = img.ToBitmap();
+                    imageInput = img;
+                    button1.Enabled = true;
+                    button3.Enabled = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = @"PNG|*.png" })
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox2.Image.Save(saveFileDialog.FileName);
+                }
             }
         }
     }

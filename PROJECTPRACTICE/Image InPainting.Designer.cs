@@ -43,9 +43,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightBlue;
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(549, 164);
+            this.button1.Location = new System.Drawing.Point(549, 187);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 35);
@@ -57,22 +58,25 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightBlue;
+            this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(549, 351);
+            this.button3.Location = new System.Drawing.Point(549, 308);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 35);
             this.button3.TabIndex = 2;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightBlue;
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(549, 226);
+            this.button2.Location = new System.Drawing.Point(549, 240);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 35);
@@ -124,14 +128,14 @@
             this.button4.BackColor = System.Drawing.Color.LightBlue;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(549, 298);
+            this.button4.Location = new System.Drawing.Point(549, 114);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 35);
             this.button4.TabIndex = 7;
             this.button4.Text = "Open Image";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.openimg_Click);
             // 
             // Image_InPainting
             // 
@@ -140,7 +144,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(761, 394);
+            this.ClientSize = new System.Drawing.Size(778, 411);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
