@@ -33,9 +33,9 @@ namespace PROJECTPRACTICE
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splashscreen));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,12 +57,25 @@ namespace PROJECTPRACTICE
             this.panel1.Size = new System.Drawing.Size(639, 370);
             this.panel1.TabIndex = 0;
             // 
+            // ProgressBar1
+            // 
+            this.ProgressBar1.BackColor = System.Drawing.Color.White;
+            this.ProgressBar1.BorderRadius = 5;
+            this.ProgressBar1.Location = new System.Drawing.Point(117, 270);
+            this.ProgressBar1.MaximumValue = 100;
+            this.ProgressBar1.Name = "ProgressBar1";
+            this.ProgressBar1.ProgressColor = System.Drawing.Color.Teal;
+            this.ProgressBar1.Size = new System.Drawing.Size(410, 10);
+            this.ProgressBar1.TabIndex = 2;
+            this.ProgressBar1.Value = 0;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(216, 151);
+            this.pictureBox2.Location = new System.Drawing.Point(242, 50);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(201, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(165, 166);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -76,18 +89,6 @@ namespace PROJECTPRACTICE
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // ProgressBar1
-            // 
-            this.ProgressBar1.BackColor = System.Drawing.Color.White;
-            this.ProgressBar1.BorderRadius = 5;
-            this.ProgressBar1.Location = new System.Drawing.Point(117, 254);
-            this.ProgressBar1.MaximumValue = 100;
-            this.ProgressBar1.Name = "ProgressBar1";
-            this.ProgressBar1.ProgressColor = System.Drawing.Color.Teal;
-            this.ProgressBar1.Size = new System.Drawing.Size(410, 10);
-            this.ProgressBar1.TabIndex = 2;
-            this.ProgressBar1.Value = 0;
-            // 
             // Splashscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +100,7 @@ namespace PROJECTPRACTICE
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splashscreen";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

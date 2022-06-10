@@ -335,11 +335,12 @@ namespace PROJECTPRACTICE
             // 
             // PictureBox2
             // 
+            this.PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(405, 153);
+            this.PictureBox2.Location = new System.Drawing.Point(251, 144);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.ShadowDecoration.Parent = this.PictureBox2;
-            this.PictureBox2.Size = new System.Drawing.Size(225, 225);
+            this.PictureBox2.Size = new System.Drawing.Size(502, 500);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PictureBox2.TabIndex = 0;
             this.PictureBox2.TabStop = false;
